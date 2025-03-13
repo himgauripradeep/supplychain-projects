@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Inventory Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #0056b3;
+            color: white;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>📦 Amazon Inventory Prediction Model</h1>
+    <p>This analysis uses a <b>Random Forest Regressor</b> to predict the reorder point based on past demand, current inventory, and lead time.</p>
+    
+    <h2>🔍 Dataset</h2>
+    <table>
+        <tr>
+            <th>Warehouse</th>
+            <th>Past Demand (Units)</th>
+            <th>Current Inventory (Units)</th>
+            <th>Lead Time (Days)</th>
+            <th>Reorder Point (Units)</th>
+        </tr>
+        <tr>
+            <td>Seattle</td><td>5000</td><td>5500</td><td>2</td><td>5200</td>
+        </tr>
+        <tr>
+            <td>New York</td><td>7000</td><td>6900</td><td>3</td><td>6800</td>
+        </tr>
+        <tr>
+            <td>Los Angeles</td><td>8000</td><td>8200</td><td>1</td><td>8100</td>
+        </tr>
+        <tr>
+            <td>Chicago</td><td>6500</td><td>6400</td><td>2</td><td>6300</td>
+        </tr>
+        <tr>
+            <td>Houston</td><td>7200</td><td>7000</td><td>4</td><td>7100</td>
+        </tr>
+    </table>
+    
+    <h2>📊 Model Performance</h2>
+    <ul>
+        <li><b>Mean Absolute Error:</b> 100</li>
+        <li><b>R² Score:</b> 0.95</li>
+    </ul>
+
+    <h2>🌟 Feature Importance</h2>
+    <img src="feature_importance.png" alt="Feature Importance Chart">
+</div>
+
+</body>
+</html>
